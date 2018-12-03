@@ -1,5 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+client.on('ready', () => {
+  client.user.setGame('1help | By SAJED','https://www.twitch.tv/One');
+  console.log('---------------');
+  console.log(' Bot Is Online')
+  console.log('---------------')
+});
 const ytdl = require('ytdl-core');
 const request = require('request');
 const fs = require('fs');
@@ -8,8 +14,7 @@ const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 const prefix = '1';
-const client.login(process.env.BOT_TOKEN);
-client.login(process.env.BOT_TOKEN);
+const discord_token = client.login(process.env.BOT_TOKEN);
 client.on('ready', function() {
     console.log(`i am ready ${client.user.username}`);
 });
